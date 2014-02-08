@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -122.33607, 47.61982 ]
+      },
+      "properties": {
+        "artist": "Sylwia Tur",
+        "image": "sylwia.jpg",
+        "url": "http://storefrontsseattle.com/2013/12/30/storefronts-inaugurates-south-lake-union-program-with-eight-local-artists/",
+        "statement": "<p>I have a fascination with language, but not as a means of communication, rather as a naturally developed mechanism that’s innate to all of us, with all of its regularities and a few exceptions, necessary components creating tension. The underlying processes that make language work are quite complex, even though things may seem smooth on the surface.</p> <p>One of the components of my work is the awareness of the internal structure of things. In syntax, the underlying or hidden structure of language is what can give us clues as to what we see on the surface.When working on my sculptures, I am using analogies to the processes that come together to form language. The shapes I choose to make are simply things I am missing, thus I’m filling a gap for myself between what is already present and what I want to bring into being. Thinking of language as a system keeps pointing me in the direction of exploring many other systems present around us, those created by nature, those formed by humans and machines, and those which are combinations of them all.</p> <p>Architecture also plays a significant role as an inspiring force behind the aesthetic of my work. I am interested in basic geometric shapes which are often devoid of inherent identity, thus providing a clean slate for my work. I can choose their identity by the way I bring them together, and this chosen vocabulary of shapes creates my own language of objects.</p>"
+      }
+    }
+  ]
+}

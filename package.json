@@ -1,0 +1,27 @@
+{
+  "name": "prototype",
+  "description": "prototype of walkabout map project for showing things like artwalks",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/sethvincent/prototype.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "bundle-css": "rework-npm style.css -o assets/bundle.css",
+    "start": "beefy app.js:bundle.js --live -- -t brfs"
+  },
+  "dependencies": {
+    "leaflet": "~0.7.2",
+    "director": "~1.2.2",
+    "normalize-css": "git://github.com/sethvincent/normalize-css",
+    "skelestyle-typography": "0.0.4",
+    "brfs": "0.0.9",
+    "handlebars": "~1.3.0"
+  },
+  "devDependencies": {
+    "beefy": "~1.0.0",
+    "rework-npm-cli": "0.0.1",
+    "myth": "~0.3.0",
+    "browserify": "~3.24.13"
+  }
+}

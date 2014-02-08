@@ -1,0 +1,64 @@
+@import "normalize-css";
+@import "skelestyle-typography";
+
+body, html {
+	height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+.location-info {
+
+}
+
+.location-info .image {
+	width: 200px;
+	display: block;
+	float: right;
+	margin-left: 20px;
+}
+
+.location-info .image img {
+	width: 100%;
+	height: auto;
+}
+
+.location-info .artist {
+
+}
+
+.location-info .statement {
+
+}
+
+/* leaflet overrides */
+
+.leaflet-popup-content {
+}
+
+.leaflet-popup-scrolled {
+	overflow: auto;
+	border: 0px;
+	margin: 10px;
+	padding: 20px;
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 3px;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 4px 4px 0 0;
+	text-align: center;
+	width: 18px;
+	height: 14px;
+	font: 18px/16px Tahoma, Verdana, sans-serif;
+	text-decoration: none;
+	font-weight: 300;
+	background: transparent;
+}
