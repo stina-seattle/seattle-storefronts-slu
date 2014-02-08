@@ -27,21 +27,11 @@ var markers = L.geoJson(art, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
+/* set template html as popup content for each geojson feature */
 function onEachFeature(feature, layer) {
 	var options = { maxWidth: 600, maxHeight: 300 }
   if (feature.properties) layer.bindPopup(template(feature.properties), options);
 }
-
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.lng + ', ' + e.latlng.lat)
-        .openOn(map);
-}
-
-map.on('click', onMapClick);
 },{"fs":2,"handlebars":17,"leaflet":19,"leaflet-providers":18}],2:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
