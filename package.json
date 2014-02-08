@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "bundle-css": "rework-npm style.css -o assets/bundle.css",
-    "start": "beefy app.js:bundle.js --live -- -t brfs"
+    "bundle-js": "browserify app.js -o assets/bundle.js -t brfs",
+    "bundle": "npm run bundle-css & npm run bundle-js",
+    "start": "beefy app.js:assets/bundle.js --live -- -t brfs"
   },
   "dependencies": {
     "leaflet": "~0.7.2",
