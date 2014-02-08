@@ -23,11 +23,11 @@ var layer = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 
 /* add art geojson to map */
 var markers = L.geoJson(art, {
-    onEachFeature: onEachFeature
+  onEachFeature: onEachFeature
 }).addTo(map);
 
 /* set template html as popup content for each geojson feature */
 function onEachFeature(feature, layer) {
-	var options = { maxWidth: 600, maxHeight: 300 }
+  var options = { maxWidth: 600, maxHeight: 300 }
   if (feature.properties) layer.bindPopup(template(feature.properties), options);
 }
