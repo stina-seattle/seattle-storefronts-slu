@@ -19,7 +19,8 @@
     "brfs": "0.0.9",
     "handlebars": "~1.3.0",
     "normalize-css": "git://github.com/sethvincent/normalize-css",
-    "Snap.js": "git+https://github.com/sethvincent/Snap.js.git"
+    "Snap.js": "git+https://github.com/sethvincent/Snap.js.git",
+    "leaflet-providers": "^1.0.3"
   },
   "devDependencies": {
     "beefy": "~1.0.0",
