@@ -8,22 +8,24 @@
   "main": "index.js",
   "scripts": {
     "bundle-css": "rework-npm style.css -o assets/bundle.css",
-    "bundle-js": "browserify app.js -o assets/bundle.js -t brfs",
+    "bundle-js": "browserify app.js -o assets/bundle.js -t brfs -t debowerify",
     "bundle": "npm run bundle-css & npm run bundle-js",
-    "start": "beefy app.js:assets/bundle.js --live -- -t brfs"
+    "start": "beefy app.js:assets/bundle.js --live -- -t brfs -t debowerify"
   },
   "dependencies": {
     "leaflet": "~0.7.2",
     "director": "~1.2.2",
-    "normalize-css": "git://github.com/sethvincent/normalize-css",
     "skelestyle-typography": "0.0.4",
     "brfs": "0.0.9",
-    "handlebars": "~1.3.0"
+    "handlebars": "~1.3.0",
+    "normalize-css": "git://github.com/sethvincent/normalize-css",
+    "Snap.js": "git+https://github.com/sethvincent/Snap.js.git"
   },
   "devDependencies": {
     "beefy": "~1.0.0",
     "rework-npm-cli": "0.0.1",
     "myth": "~0.3.0",
-    "browserify": "~3.24.13"
+    "browserify": "~3.24.13",
+    "debowerify": "^0.7.0"
   }
 }

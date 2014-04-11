@@ -1,3 +1,4 @@
+var Snap = require('Snap.js');
 var Handlebars = require('handlebars');
 var Leaflet = require('leaflet');
 require('leaflet-providers');
