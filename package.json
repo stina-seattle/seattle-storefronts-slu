@@ -10,7 +10,10 @@
     "bundle-css": "rework-npm style.css -o assets/bundle.css",
     "bundle-js": "browserify app.js -o assets/bundle.js -t brfs -t debowerify",
     "bundle": "npm run bundle-css & npm run bundle-js",
-    "start": "beefy app.js:assets/bundle.js --live -- -t brfs -t debowerify"
+    "watch-js": "watchify app.js -o assets/bundle.js -t brfs -t debowerify",
+    "watch-css": "gazer -p style.css npm run bundle-css",
+    "watch": "npm run watch-js & npm run watch-css",
+    "start": "serve & npm run watch"
   },
   "dependencies": {
     "leaflet": "~0.7.2",
@@ -20,13 +23,19 @@
     "handlebars": "~1.3.0",
     "normalize-css": "git://github.com/sethvincent/normalize-css",
     "Snap.js": "git+https://github.com/sethvincent/Snap.js.git",
-    "leaflet-providers": "^1.0.3"
+    "leaflet-providers": "^1.0.3",
+    "flatsheet": "^0.1.3",
+    "dom": "0.0.3",
+    "dom-events": "^0.1.1",
+    "element-class": "^0.1.1"
   },
   "devDependencies": {
-    "beefy": "~1.0.0",
     "rework-npm-cli": "0.0.1",
     "myth": "~0.3.0",
     "browserify": "~3.24.13",
-    "debowerify": "^0.7.0"
+    "debowerify": "^0.7.0",
+    "gazer": "0.0.3",
+    "serve": "^1.4.0",
+    "watchify": "^0.8.3"
   }
 }

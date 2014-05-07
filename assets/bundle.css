@@ -527,91 +527,83 @@ pre code {
   white-space: pre;
 }
 
-html,
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.snap-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.snap-drawers {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-}
-
-.snap-drawer {
-  position: absolute;
-  top: 0;
-  right: auto;
-  bottom: 0;
-  left: auto;
-  width: 265px;
-  height: auto;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transition: width 0.3s ease;
-  -moz-transition: width 0.3s ease;
-  -ms-transition: width 0.3s ease;
-  -o-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-}
-
-.snap-drawer-left {
-  left: 0;
-  z-index: 1;
-}
-
-.snap-drawer-right {
-  right: 0;
-  z-index: 1;
-}
-
-.snapjs-left .snap-drawer-right,
-.snapjs-right .snap-drawer-left {
-  display: none;
-}
-
-.snapjs-expand-left .snap-drawer-left,
-.snapjs-expand-right .snap-drawer-right {
-  width: 100%;
-}
-
 body,
 html {
   height: 100%;
 }
 
-#map {
+#page {
   height: 100%;
 }
 
+/* the map */
 
+.map-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.map-container.visible {
+  display: block;
+}
+
+.map-container.hidden {
+  display: hidden;
+}
+
+.index .map-container {
+  opacity: 0.4;
+}
+
+#info {
+  background-color: #fcfcfc;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#info .inside {
+  padding: 30px;
+}
+
+#infobox-toggle {
+  display: block;
+}
+
+#infobox {
+  display: none;
+}
+
+#infobox.active {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 124px;
+  padding: 10px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#close-modal {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  float: right;
+  line-height: 1;
+}
+
+.location-info {
+  overflow: scroll;
+  height: 100%;
+  padding: 20px;
+}
 
 .location-info .image {
   width: 200px;
@@ -625,13 +617,7 @@ html {
   height: auto;
 }
 
-
-
-
-
 /* leaflet overrides */
-
-
 
 .leaflet-popup-scrolled {
   overflow: auto;
@@ -642,6 +628,7 @@ html {
 
 .leaflet-popup-content-wrapper {
   border-radius: 3px;
+  position: fixed;
 }
 
 .leaflet-container a.leaflet-popup-close-button {
@@ -656,4 +643,41 @@ html {
   text-decoration: none;
   font-weight: 300;
   background: transparent;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 700px) {
+  .map-container {
+    width: 80%;
+  }
+
+  #info {
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 0px;
+    overflow: scroll;
+    height: 100%;
+    width: 300px;
+  }
+
+  #infobox-toggle {
+    display: none;
+  }
+
+  #infobox {
+    display: block;
+  }
+
+  .modal {
+    top: 20px;
+    left: 320px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 20px;
+  }
+
+  .location-info {
+    margin: 0px auto;
+    position: relative;
+  }
 }

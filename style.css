@@ -1,17 +1,85 @@
 @import "normalize-css";
 @import "skelestyle-typography";
-@import "Snap.js";
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
-#map {
+#page {
   height: 100%;
+}
+
+/* the map */
+
+.map-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.map-container.visible {
+  display: block;
+}
+
+.map-container.hidden {
+  display: hidden;
+}
+
+.index .map-container {
+  opacity: 0.4;
+}
+
+#info {
+  background-color: #fcfcfc;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#info .inside {
+  padding: 30px;
+}
+
+#infobox-toggle {
+  display: block;
+}
+
+#infobox {
+  display: none;
+}
+
+
+
+#infobox.active {
+  display: block;
+}
+
+
+.modal {
+  position: fixed;
+  top: 124px;
+  padding: 10px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#close-modal {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  float: right;
+  line-height: 1;
 }
 
 .location-info {
-
+  overflow: scroll;
+  height: 100%;
+  padding: 20px;
 }
 
 .location-info .image {
@@ -26,18 +94,7 @@ body, html {
   height: auto;
 }
 
-.location-info .artist {
-
-}
-
-.location-info .statement {
-
-}
-
 /* leaflet overrides */
-
-.leaflet-popup-content {
-}
 
 .leaflet-popup-scrolled {
   overflow: auto;
@@ -48,6 +105,7 @@ body, html {
 
 .leaflet-popup-content-wrapper {
   border-radius: 3px;
+  position: fixed;
 }
 
 .leaflet-container a.leaflet-popup-close-button {
@@ -62,4 +120,41 @@ body, html {
   text-decoration: none;
   font-weight: 300;
   background: transparent;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 700px) {
+  .map-container {
+    width: 80%;
+  }
+
+  #info {
+    border-right: 1px solid #dbdbdb;
+    border-bottom: 0px;
+    overflow: scroll;
+    height: 100%;
+    width: 300px;
+  }
+
+  #infobox-toggle {
+    display: none;
+  }
+
+  #infobox {
+    display: block;
+  }
+
+  .modal {
+    top: 20px;
+    left: 320px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 20px;
+  }
+
+  .location-info {
+    margin: 0px auto;
+    position: relative;
+  }
 }
