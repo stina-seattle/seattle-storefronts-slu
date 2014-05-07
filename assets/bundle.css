@@ -606,7 +606,7 @@ html {
 }
 
 .location-info .image {
-  width: 200px;
+  width: 100px;
   display: block;
   float: right;
   margin-left: 20px;
@@ -666,6 +666,10 @@ html {
 
   #infobox {
     display: block;
+  }
+
+  .location-info .image {
+    width: 200px;
   }
 
   .modal {
