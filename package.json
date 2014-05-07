@@ -27,7 +27,8 @@
     "flatsheet": "^0.1.3",
     "dom": "0.0.3",
     "dom-events": "^0.1.1",
-    "element-class": "^0.1.1"
+    "element-class": "^0.1.1",
+    "fastclick": "^1.0.1"
   },
   "devDependencies": {
     "rework-npm-cli": "0.0.1",

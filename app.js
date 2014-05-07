@@ -6,6 +6,10 @@ var Leaflet = require('leaflet');
 require('leaflet-providers');
 var fs = require('fs');
 
+var FastClick = require('fastclick');
+FastClick.attach(document.body);
+
+
 var page = document.getElementById('page');
 var flatsheet = new Flatsheet();
 
