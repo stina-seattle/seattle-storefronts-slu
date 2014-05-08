@@ -1,31 +1,27 @@
 {
-  "name": "prototype",
+  "name": "walkabout-prototype",
   "description": "prototype of walkabout map project for showing things like artwalks",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "url": "git://github.com/sethvincent/prototype.git"
   },
   "main": "index.js",
   "scripts": {
     "bundle-css": "rework-npm style.css -o assets/bundle.css",
-    "bundle-js": "browserify app.js -o assets/bundle.js -t brfs -t debowerify",
+    "bundle-js": "browserify app.js -o assets/bundle.js -t brfs",
     "bundle": "npm run bundle-css & npm run bundle-js",
-    "watch-js": "watchify app.js -o assets/bundle.js -t brfs -t debowerify",
+    "watch-js": "watchify app.js -o assets/bundle.js -t brfs",
     "watch-css": "gazer -p style.css npm run bundle-css",
     "watch": "npm run watch-js & npm run watch-css",
     "start": "serve & npm run watch"
   },
   "dependencies": {
     "leaflet": "~0.7.2",
-    "director": "~1.2.2",
     "skelestyle-typography": "0.0.4",
-    "brfs": "0.0.9",
     "handlebars": "~1.3.0",
     "normalize-css": "git://github.com/sethvincent/normalize-css",
-    "Snap.js": "git+https://github.com/sethvincent/Snap.js.git",
     "leaflet-providers": "^1.0.3",
-    "flatsheet": "^0.1.3",
-    "dom": "0.0.3",
+    "flatsheet": "^0.1.6",
     "dom-events": "^0.1.1",
     "element-class": "^0.1.1",
     "fastclick": "^1.0.1"
@@ -34,6 +30,7 @@
     "rework-npm-cli": "0.0.1",
     "myth": "~0.3.0",
     "browserify": "~3.24.13",
+    "brfs": "0.0.9",
     "debowerify": "^0.7.0",
     "gazer": "0.0.3",
     "serve": "^1.4.0",

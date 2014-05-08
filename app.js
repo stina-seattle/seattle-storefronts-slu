@@ -59,8 +59,6 @@ function addMarker (row) {
     if (window.innerWidth < 700) inner.style.height = window.innerHeight - 120 + 'px';
     else inner.style.height = window.innerHeight - 40 + 'px';
 
-    console.log(inner, window.innerHeight - 120)
-
     var close = document.getElementById('close-modal');
     eve.on(close, 'click', function (e) {
       page.removeChild(modal);
