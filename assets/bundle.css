@@ -532,6 +532,17 @@ html {
   height: 100%;
 }
 
+.site-logo {
+  float: left;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-weight: 300;
+  font-size: 20px;
+}
+
 #page {
   height: 100%;
 }
@@ -569,14 +580,20 @@ html {
 
 #info .inside {
   padding: 30px;
+  clear: both;
 }
 
 #infobox-toggle {
   display: block;
+  float: right;
+  position: absolute;
+  right: 30px;
+  top: 25px;
 }
 
 #infobox {
   display: none;
+  font-size: 80%;
 }
 
 #infobox.active {
@@ -585,7 +602,7 @@ html {
 
 .modal {
   position: fixed;
-  top: 124px;
+  top: 99px;
   padding: 10px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.9);
@@ -648,6 +665,12 @@ html {
 /* media queries */
 
 @media only screen and (min-width: 700px) {
+  .site-logo {
+    float: none;
+    width: 200px;
+    margin-right: 10px;
+  }
+
   .map-container {
     width: 80%;
   }
@@ -668,10 +691,6 @@ html {
     display: block;
   }
 
-  .location-info .image {
-    width: 200px;
-  }
-
   .modal {
     top: 20px;
     left: 320px;
@@ -683,5 +702,11 @@ html {
   .location-info {
     margin: 0px auto;
     position: relative;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .location-info .image {
+    width: 200px;
   }
 }

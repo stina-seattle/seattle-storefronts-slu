@@ -9,7 +9,6 @@ var fs = require('fs');
 var fastClick = require('fastclick');
 fastClick(document.body);
 
-
 var page = document.getElementById('page');
 var flatsheet = new Flatsheet();
 
@@ -70,7 +69,6 @@ function addMarker (row) {
   });
 }
 
-
 /* create infobox toggle for mobile */
 var infobox = document.getElementById('infobox');
 var toggle = document.getElementById('infobox-toggle');
@@ -79,9 +77,11 @@ eve.on(toggle, 'click', function (e) {
   if (elClass(toggle).has('active')) {
     elClass(toggle).remove('active');
     elClass(infobox).remove('active');
+    toggle.innerHTML = '+ open';
   } else {
     elClass(toggle).add('active');
     elClass(infobox).add('active');
+    toggle.innerHTML = 'x close';
   }
   e.preventDefault();
 });

@@ -10,12 +10,11 @@ var fs = require('fs');
 var fastClick = require('fastclick');
 fastClick(document.body);
 
-
 var page = document.getElementById('page');
 var flatsheet = new Flatsheet();
 
 /* pull in template for showing info about a location */
-var template = Handlebars.compile("<section class=\"location-info\">\n  <a id=\"close-modal\" href=\"#\">x</a>\n  <h1 class=\"artist\"><a href=\"{{ url }}\" target=\"_blank\">{{ artist }}</a></h1>\n  <div class=\"statement\">\n    <a class=\"image\" href=\"{{ url }}\" target=\"_blank\">\n      <img src=\"img/{{ image }}\">\n    </a>\n    {{{ statement }}}\n  </div>\n  <p><b><a href=\"{{ url }}\" target=\"_blank\">Learn more</a></b></p>\n</section>");
+var template = Handlebars.compile("<section class=\"location-info\">\n  <a id=\"close-modal\" href=\"#\">x</a>\n  <h1 class=\"artist\"><a href=\"{{ url }}\" target=\"_blank\">{{ artist }}</a></h1>\n  <div class=\"statement\">\n    <a class=\"image\" href=\"{{ url }}\" target=\"_blank\">\n      <img src=\"{{ image }}\">\n    </a>\n    {{{ statement }}}\n  </div>\n  <p><b><a href=\"{{ url }}\" target=\"_blank\">Learn more</a></b></p>\n</section>");
 
 /* set image path */
 L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
@@ -71,7 +70,6 @@ function addMarker (row) {
   });
 }
 
-
 /* create infobox toggle for mobile */
 var infobox = document.getElementById('infobox');
 var toggle = document.getElementById('infobox-toggle');
@@ -80,9 +78,11 @@ eve.on(toggle, 'click', function (e) {
   if (elClass(toggle).has('active')) {
     elClass(toggle).remove('active');
     elClass(infobox).remove('active');
+    toggle.innerHTML = '+ open';
   } else {
     elClass(toggle).add('active');
     elClass(infobox).add('active');
+    toggle.innerHTML = 'x close';
   }
   e.preventDefault();
 });
