@@ -28,7 +28,7 @@ map.setView([47.62240724816091, -122.33692646026611], 16);
 var layer = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 
 /* pull in art locations from app.flatsheet.io */
-flatsheet.sheet('iq5jypw-c7vedyf9udjo-q', getRows);
+flatsheet.sheet('1lbocmzawdbe2zmz8ges9a', getRows);
 
 /* callback for request to flatsheet */
 function getRows (error, response) {
@@ -47,7 +47,7 @@ function addMarker (row) {
   var html = template(row);
 
   var marker = L.marker(latlng);
-  marker.addTo(map) //.bindPopup(html, options);
+  marker.addTo(map);
 
   marker.on('click', function(e) {
     var modal = document.createElement('div');

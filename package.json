@@ -1,9 +1,9 @@
 {
-  "name": "walkabout-prototype",
-  "description": "prototype of walkabout map project for showing things like artwalks",
+  "name": "seattle-storefronts-slu",
+  "description": "a map of seattle storefront art locations",
   "version": "0.1.0",
   "repository": {
-    "url": "git://github.com/sethvincent/prototype.git"
+    "url": "git://github.com/sethvincent/seattle-storefronts-slu.git"
   },
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "watch-js": "watchify app.js -o assets/bundle.js -t brfs",
     "watch-css": "gazer -p style.css npm run bundle-css",
     "watch": "npm run watch-js & npm run watch-css",
-    "start": "serve & npm run watch"
+    "start": "serve -p 3123 & npm run watch"
   },
   "dependencies": {
     "leaflet": "~0.7.2",

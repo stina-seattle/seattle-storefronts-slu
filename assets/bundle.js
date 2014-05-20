@@ -29,7 +29,7 @@ map.setView([47.62240724816091, -122.33692646026611], 16);
 var layer = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
 
 /* pull in art locations from app.flatsheet.io */
-flatsheet.sheet('iq5jypw-c7vedyf9udjo-q', getRows);
+flatsheet.sheet('1lbocmzawdbe2zmz8ges9a', getRows);
 
 /* callback for request to flatsheet */
 function getRows (error, response) {
@@ -48,7 +48,7 @@ function addMarker (row) {
   var html = template(row);
 
   var marker = L.marker(latlng);
-  marker.addTo(map) //.bindPopup(html, options);
+  marker.addTo(map);
 
   marker.on('click', function(e) {
     var modal = document.createElement('div');
@@ -84,6 +84,7 @@ eve.on(toggle, 'click', function (e) {
   }
   e.preventDefault();
 });
+
 },{"dom-events":6,"element-class":10,"fastclick":11,"flatsheet":12,"fs":2,"handlebars":28,"leaflet":30,"leaflet-providers":29}],2:[function(require,module,exports){
 
 },{}],3:[function(require,module,exports){
