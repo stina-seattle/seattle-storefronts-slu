@@ -14,7 +14,7 @@ var page = document.getElementById('page');
 var flatsheet = new Flatsheet();
 
 /* pull in template for showing info about a location */
-var template = Handlebars.compile("<section class=\"location-info\">\n  <a id=\"close-modal\" href=\"#\">x</a>\n  <h1 class=\"artist\"><a href=\"{{ url }}\" target=\"_blank\">{{ artist }}</a></h1>\n  <div class=\"statement\">\n    <a class=\"image\" href=\"{{ url }}\" target=\"_blank\">\n      <img src=\"{{ image }}\">\n    </a>\n    {{{ statement }}}\n  </div>\n  <p><b><a href=\"{{ url }}\" target=\"_blank\">Learn more</a></b></p>\n</section>");
+var template = Handlebars.compile("<section class=\"location-info\">\n  <a id=\"close-modal\" href=\"#\">x</a>\n  <h1 class=\"artist\"><a href=\"{{ url }}\" target=\"_blank\">{{ artist }}</a></h1>\n  <p><b>{{ street }}</b></p>\n  <div class=\"statement\">\n    <a class=\"image\" href=\"{{ url }}\" target=\"_blank\">\n      <img src=\"{{ image }}\">\n    </a>\n    {{{ statement }}}\n  </div>\n  <p><b><a href=\"{{ url }}\" target=\"_blank\">Learn more</a></b></p>\n</section>");
 
 /* set image path */
 L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
