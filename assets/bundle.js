@@ -26,7 +26,7 @@ var map = L.map('map');
 map.setView([47.62240724816091, -122.33692646026611], 16);
 
 /* use the pretty watercolor tileset from stamen */
-var layer = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+var layer = L.tileLayer.provider('MapBox.sethvincent.j0dohl2g').addTo(map);
 
 /* pull in art locations from app.flatsheet.io */
 flatsheet.sheet('1lbocmzawdbe2zmz8ges9a', getRows);
